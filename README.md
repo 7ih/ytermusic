@@ -3,28 +3,27 @@
 ![index](https://user-images.githubusercontent.com/16625987/202790566-9b114019-63f9-4c4b-965d-820fd0d80a17.png)
 
 YTerMusic is a terminal based Youtube Music Player.
-It's aims to be as fast and simple as possible.
+It aims to be as fast and simple as possible.
 
 ## Features
 
-- Play your Youtube Music Playlist and Supermix.
+- Play your Youtube Music Playlists and Supermix.
 - Memory efficient (Around 20MB of RAM while fully loaded)
 - Cache all downloads and store them
-- Work even without connection (If musics were already downloaded)
+- Works even without connection (if music was already downloaded)
 - Automatic background download manager
 
 ## Setup
 
-- Download the latest version from `releases`
-- Give `ytermusic` authentication to your account, by copying out the headers
-  1. Open the https://music.youtube.com website in your browser
-  2. Open the developer tools (F12)
-  3. Go to the Network tab
-  4. Find the request to the `music.youtube.com` document / page
-  5. Copy the `Cookie` header from the associated response request
-  6. Create a file in the same directory as the binary called `headers.txt`
-  7. Create an entry like this `Cookie: <cookie>`
-  8. Add a valid "User Agent" below the cookie, like `User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36`
+- Download the latest version from [releases](https://github.com/ccgauche/ytermusic/releases), or [build from source](https://github.com/ccgauche/ytermusic#building-from-source)
+- Give `ytermusic` authentication to your account by copying out the headers
+  1. Open https://music.youtube.com in your browser
+  2. Open the developer tools (F12) and go to the Network tab
+  3. Find the request to the `music.youtube.com` document / page
+  4. Copy the `Cookie` header from the request headers (you might need to enable raw headers to get the full cookie)
+  5. Create a file in the same directory as the binary called `headers.txt`
+  6. Create an entry like this: `Cookie: <cookie>`
+  7. Add a valid "User Agent" below the cookie, like `User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36`
 - Then you can start `ytermusic`
 
 ## Linux
@@ -42,7 +41,7 @@ $ sudo apt install alsa-tools libasound2-dev libdbus-1-dev pkg-config
 ## Building from source
 
 - Clone the repository
-- Install rust `https://rustup.rs` nightly
+- Install rust `https://rustup.rs`
 - Run `cargo build --release`
 - The executable is in `target/release/ytermusic`
 
@@ -50,7 +49,7 @@ $ sudo apt install alsa-tools libasound2-dev libdbus-1-dev pkg-config
 
 - Use your mouse to click in lists if your terminal has mouse support
 - Press `Space` to play/pause
-- Press `Enter` to select a playlist or a music
+- Press `Enter` to select a playlist or song
 - Press `f` to search
 - Press `s` to shuffle
 - Press `Arrow Right` or `>` to skip 5 seconds
