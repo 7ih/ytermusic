@@ -44,7 +44,7 @@ $ sudo apt install alsa-tools libasound2-dev libdbus-1-dev pkg-config
 - Clone the repository
 - Install rust `https://rustup.rs` nightly
 - Run `cargo build --release`
-- The executable is in `target/release/ytermusic.exe` or `target/release/ytermusic`
+- The executable is in `target/release/ytermusic`
 
 ## Usage
 
